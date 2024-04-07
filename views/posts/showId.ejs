@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= post.title %></title>
+</head>
+<body>
+    <h1><%= post.title %></h1>
+    <p><%= post.body %></p>
+    <% if (post.attachment) { %>
+        <img src="/posts/<%= post.id %>/attachment" alt="Post image">
+    <% } %>
+</body>
+</html>

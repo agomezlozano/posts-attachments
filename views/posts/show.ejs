@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= post.title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+<body>
+    <h1><%= post.title %></h1>
+    <p><%= post.body %></p>
+    <img src="/posts/<%= post.id %>/attachment" alt="Post image">
+    <a href="/posts/<%= post.id %>/edit">Editar</a>
+    <form action="/posts/<%= post.id %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit">Borrar</button>
+    </form>
+</body>
+</html>

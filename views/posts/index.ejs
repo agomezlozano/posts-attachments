@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Posts</title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+    <h1>Posts</h1>
+
+    <% for(let post of posts) { %>
+        <div class="post">
+          <h2><%= post.title %></h2>
+          <% if(post.attachment) { %>
+            <img src="<%= post.attachment.url %>" alt="Post image">
+          <% } %>
+          <a href="/posts/<%= post.id %>">Mostrar</a>
+          <a href="/posts/<%= post.id %>/edit">Editar</a>
+          <form action="/posts/<%= post.id %>" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit">Borrar</button>
+          </form>
+        </div>
+      <% } %>
+    <p></p>
+    <a href="/posts/new">Crear nuevo post</a>
+</body>
+</html>

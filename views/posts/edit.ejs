@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar <%= post.title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1>Editar <%= post.title %></h1>
+    <form action="/posts/<%= post.id %>" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_method" value="PUT">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" value="<%= post.title %>" required>
+        <label for="body">Cuerpo:</label> 
+        <textarea id="body" name="body" required></textarea> 
+        <label for="image">Imagen:</label>
+        <input type="file" id="image" name="image">
+        <button type="submit">Actualizar</button>
+    </form> 
+</body>
+</html>

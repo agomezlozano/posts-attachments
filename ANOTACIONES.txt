@@ -1,0 +1,8 @@
+-añadido a github:
+https://github.com/agomezlozano/pfinal.git
+
+-he hecho cambios en layout y en los ficheros ejs para que fuera responsive
+
+-he incluido estilos css a las paginas
+
+
